@@ -22,12 +22,10 @@ Ante estas inconsistencias (y confirmando que los agregadores comerciales omiten
 
 
 
-### Visualización del Grafo (Mockup / BMP)
-
-> 🖼️ **Insertar imagen aquí:**
-> `![Grafo de Relaciones Societarias en Maltego](./assets/maltego_graph_mockup.bmp)`
-> *Descripción: Diagramación topológica correlacionando personas físicas, CUITs, SAS/SRL, escribanías y alertas de riesgo patrimonial.*
-> 
+### Visualización Topológica (Mockup de Estructura Real)
+> 🖼️ **Ejemplo de correlación:**
+> ![Grafo de Relaciones Societarias](./graph%20para%20github.bmp)
+> *Nota: Los datos personales, nombres de empresas y CUITs han sido ofuscados (anonimizados) por cuestiones de OPSEC y confidencialidad. Asimismo, esta muestra exhibe un fragmento representativo correspondiente a una cuarta parte (25%) de la topología real completa, conservando intacta la complejidad estructural de la red descubierta durante la investigación.*
 
 ---
 
