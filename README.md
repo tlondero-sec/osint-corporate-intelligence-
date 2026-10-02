@@ -92,7 +92,35 @@ Con el archivo histórico completo (2015-2026) descargado localmente, la siguien
 
 * **Judiciales y Notariales:** Escribanías, edictos, expedientes de fueros penales/comerciales, registros de embargo.
 
+No subas los PDFs al código fuente del repositorio. GitHub tiene límites estrictos para archivos binarios y subir gigas de PDFs te va a inflar el repositorio hasta volverlo inmanejable. La mejor práctica es publicar el *scraper* con instrucciones claras para que cada investigador descargue los documentos por su cuenta. Si querés ofrecer la comodidad de los archivos ya listos, compilá los ZIPs por año y subilos a la pestaña de **Releases** de GitHub, o publicá el dataset en HuggingFace.
 
+Lo que sí tiene sentido subir al repositorio principal (o distribuir como el núcleo de tu proyecto) es la base de datos en *plaintext*.
+
+Tu visión de armar una herramienta de terminal con alertas y un feed cronológico es el paso lógico para convertir esto de un simple *script* a una plataforma de OSINT corporativo. Para plasmar esto en tu `README.md` como la hoja de ruta del proyecto, podés estructurarlo de esta manera:
+
+### 5. Roadmap: Pipeline de Procesamiento e Inteligencia (Próximas Fases)
+
+El objetivo final de esta herramienta trasciende la simple recolección de documentos. La arquitectura planificada busca transformar miles de PDFs estáticos en un motor de inteligencia relacional interactivo, operable directamente desde la terminal.
+
+* **Fase 1: Extracción Textual y Normalización**
+* Procesamiento masivo del archivo histórico (2015-presente) para convertir los PDFs a *plaintext*.
+* Limpieza de ruido tipográfico y estandarización de formatos de fechas y nomenclaturas legales.
+
+
+* **Fase 2: Estructuración y Base de Datos Local**
+* Implementación de expresiones regulares (Regex) para identificar y aislar entidades clave: CUITs, razones sociales, nombres propios y tipos de trámites (ej. edictos, quiebras, constitución de sociedades).
+* Migración del texto plano a una base de datos local y ultraligera (SQLite / DuckDB) optimizada para consultas de baja latencia.
+
+
+* **Fase 3: Motor de Búsqueda CLI (Feed RSS Corporativo)**
+* Desarrollo de una interfaz de línea de comandos (CLI) interactiva.
+* Capacidad de inyectar *queries* por CUIT o nombre y recibir un *feed* cronológico (estilo RSS) con absolutamente todos los movimientos societarios registrados a lo largo de los años.
+* Sistema de *flagging*: Posibilidad de etiquetar CUITs de interés y generar listas de seguimiento para recibir alertas automáticas si aparecen en nuevos boletines.
+
+
+* **Fase 4: Análisis de Riesgo con NLP (Machine Learning Ligeros)**
+* Integración de un modelo *Transformer* local y liviano, ajustado con un algoritmo propio para interpretar el contexto legal del texto.
+* Detección automatizada de anomalías y movimientos sospechosos (ej. cambios repentinos de domicilio legal seguidos de concursos de acreedores, o transferencia masiva de cuotas sociales a prestanombres).
 
 ### Habilidades Clave (Hard Skills)
 
